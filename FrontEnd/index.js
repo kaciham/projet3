@@ -1,3 +1,27 @@
+let token = localStorage.getItem("token");
+
+function editor() {
+  if (token) {
+    document.getElementsByClassName("filterBar")[0].style.display = "none";
+    document.querySelector(".logout").style.display = "block";
+    document.querySelector(".login").style.display = "none";
+    // document.querySelector(".project").style.display = "flex";
+    document.querySelector(".editor").style.display = "flex";
+    document.querySelector(".projet-item").style.display = "flex";
+  }
+}
+
+editor();
+
+function logout() {
+  localStorage.removeItem("token");
+  window.location.href = "index.html";
+  // document.querySelector(".login").style.display = "block";
+  // document.querySelector(".logout").style.display = "none";
+  // document.getElementsByClassName("filterBar")[0].style.display = "flex";
+  // document.querySelector(".project").style.display = "none";
+  // document.querySelector(".editor").style.display = "none";
+}
 // Initialisation
 let allData = [];
 fetch("http://localhost:5678/api/works")
@@ -23,7 +47,7 @@ function displayWorks(data) {
   });
 }
 
-// Fonction pour filtrer et afficher les travaux en fonction du filtre sélectionné
+// Fonction pour filtrer et afficher les projets en fonction du filtre sélectionné
 function applyFilter(category) {
   const filteredData =
     category === "tous"

@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color:#FFFEF8 ;
 }
 ol, ul {
 	list-style: none;
@@ -91,13 +92,21 @@ nav ul {
 	list-style-type: none;
 
 }
-nav li {
+
+nav li img {
+	height: 15px;
+}
+nav li, a {
 	padding: 0 10px;
 	font-size: 1.2em;
+	text-decoration: none;
+	color: black;
+	font-size: 14px;
 }
 
 li:hover {
 	color: #B1663C;
+	cursor: pointer;
 }
 #introduction {
 	display: flex;
@@ -122,10 +131,7 @@ li:hover {
 #introduction p {
 	margin-bottom: 0.5em;
 }
-#portfolio h2 {
-	text-align: center;
-	margin-bottom: 1em;
-}
+
 .gallery {
 	width: 100%;
 	display: grid;
@@ -190,6 +196,7 @@ footer nav ul {
 .filterBar {
 	display: flex;
 	justify-content: center;
+	margin-bottom: 40px;
 }
 
 .filter {
@@ -220,29 +227,22 @@ footer nav ul {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	font-size: 14px;
 	gap: 10px
 }
 
-#login form{
-		
-		margin-top: 30px;
-		display: flex;
-		flex-direction: column;
-		width: 300px;
-		justify-content: center;
-		gap: 10px;
-		text-align: center;
-	}
-
-#login form input {
-	height: 40px;
+#login  input {
+	height: 51px;
+	width: 379px;
     font-size: 1.2em;
     border: none;
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 	margin-bottom: 10px;
+	padding-left: 15px;
+	vertical-align: middle;
 	}
 
-#login form button {
+#login button {
 	height: 40px;
     font-size: 1.2em;
     border: none;
@@ -256,14 +256,86 @@ footer nav ul {
 	border-radius: 60px ;
 }
 
-#login form p:hover {
-	text-decoration: underline;
+#login button:hover, #login button:focus	 {
+	background-color: #28917d;
 }
 
-#login form p{
+#login p:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	
+}
+#login h2{
+	margin-bottom: 20px;
+}
+
+#login p{
 	text-align: center;
 }
 
-#login form label {
+#login label {
 	text-align: left;
+	margin-bottom: 10px;
+}
+
+.form-item {
+	display: flex;
+	flex-direction: column;
+	margin: 0px 10px;
+}
+
+.invisible {
+	display: none;
+}
+
+.errorMessage {
+	display: none;
+	color: red;
+	width: 379px;
+	padding: 10px;
+}
+
+.logout {
+	display: none;
+	font-size: 14px;
+}
+
+.login {
+display: block;
+}
+
+a {
+	padding: 0;
+}
+
+.editor {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	height: 59px;
+	background-color: black;
+	text-align: center;
+
+}
+
+.editor-item {
+	font-size: 16px;
+	font-weight: 400 ;
+	color: white;
+	margin: 0px 5px;
+}
+
+.project {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	margin-bottom: 50px;
+}
+
+.projet-item {
+	display: none;
+	flex-direction: row;
+	align-items: center;
+	margin: 0px 30px;
 }

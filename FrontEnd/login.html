@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="/FrontEnd//assets/style.css" />
+    <link rel="stylesheet" href="/FrontEnd/assets/style.css" />
   </head>
   <body>
     <header>
@@ -28,13 +28,36 @@
       </nav>
     </header>
     <main>
-      <section id="login">
-        <h2>Log In</h2>
-        <form action="post">
-          <label for="email">E-mail</label>
-          <input type="text" name="email" id="email" />
-          <label for="password">Mot de passe</label>
-          <input type="password" name="password" id="password" />
+      <section>
+        <form action="post" id="login">
+          <h2>Log In</h2>
+          <div class="form-item">
+            <label for="email">E-mail</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Votre e-mail"
+            />
+            <div class="errorEmpty invisible">
+              Ce Champ ne doit pas être vide
+            </div>
+          </div>
+          <div class="form-item">
+            <label for="password">Mot de passe</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Votre mot de passe"
+            />
+          </div>
+          <div class="errorMessage">
+            <p>
+              Ces informations n'ont pas permis de vous identifier, veuillez à
+              nouveau saisir vos informations de connexion
+            </p>
+          </div>
           <div>
             <button type="submit">Se connecter</button>
           </div>
@@ -43,4 +66,5 @@
       </section>
     </main>
   </body>
+  <script src="/FrontEnd/login.js"></script>
 </html>
