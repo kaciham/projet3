@@ -11,60 +11,62 @@
       rel="stylesheet"
     />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="/FrontEnd/assets/style.css" />
+    <link rel="stylesheet" href="/assets/style.css" />
   </head>
   <body>
-    <header>
-      <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
-      <nav>
-        <ul>
-          <li><a href="/FrontEnd/index.html">projets</a></li>
-          <li><a href="/FrontEnd/index.html#contact">contact</a></li>
-          <li><a href="/FrontEnd/login.html">login</a></li>
-          <li>
-            <img src="/FrontEnd/assets/icons/instagram.png" alt="Instagram" />
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <form action="post" id="login">
-          <h2>Log In</h2>
-          <div class="form-item">
-            <label for="email">E-mail</label>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              placeholder="Votre e-mail"
-            />
-            <div class="errorEmpty invisible">
-              Ce Champ ne doit pas être vide
+
+      <header>
+        <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+        <nav>
+          <ul>
+            <li><a href="/index.html">projets</a></li>
+            <li><a href="/index.html#contact">contact</a></li>
+            <li><a href="/login.html">login</a></li>
+            <li>
+              <img src="/assets/icons/instagram.png" alt="Instagram" />
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <form action="post" id="login">
+            <h2>Log In</h2>
+            <div class="form-item">
+              <label for="email">E-mail</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Votre e-mail"
+              />
+              <div class="errorEmpty invisible">
+                Ce Champ ne doit pas être vide
+              </div>
             </div>
-          </div>
-          <div class="form-item">
-            <label for="password">Mot de passe</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Votre mot de passe"
-            />
-          </div>
-          <div class="errorMessage">
-            <p>
-              Ces informations n'ont pas permis de vous identifier, veuillez à
-              nouveau saisir vos informations de connexion
-            </p>
-          </div>
-          <div>
-            <button type="submit">Se connecter</button>
-          </div>
-          <p>Mot de passe oublié</p>
-        </form>
-      </section>
-    </main>
+            <div class="form-item">
+              <label for="password">Mot de passe</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Votre mot de passe"
+              />
+            </div>
+            <div class="errorMessage">
+              <p>
+                Ces informations n'ont pas permis de vous identifier, veuillez à
+                nouveau saisir vos informations de connexion
+              </p>
+            </div>
+            <div>
+              <button type="submit">Se connecter</button>
+            </div>
+            <p>Mot de passe oublié</p>
+          </form>
+        </section>
+      </main>
+    </div>
   </body>
-  <script src="/FrontEnd/login.js"></script>
+  <script src="/login.js"></script>
 </html>
