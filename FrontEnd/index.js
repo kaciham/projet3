@@ -1,8 +1,6 @@
 let token = localStorage.getItem("token");
 let modalContent = document.querySelector(".modalContent");
 let modalOption = document.querySelector(".modalOption");
-console.log(modalOption);
-console.log(modalContent);
 
 function editor() {
   if (token) {
@@ -28,6 +26,8 @@ function logout() {
   // document.querySelector(".project").style.display = "none";
   // document.querySelector(".editor").style.display = "none";
 }
+
+// I AFFICHAGE FILTRES PAGE PRINCIPALE
 // Initialisation
 
 let allData = [];
@@ -86,7 +86,7 @@ filters.forEach((filter) => {
   });
 });
 
-// feed modal element
+// feed modal element delete content
 
 fetch("http://localhost:5678/api/works")
   .then((response) => {
@@ -104,7 +104,7 @@ fetch("http://localhost:5678/api/works")
     });
   });
 
-//feed modal category
+//feed modal category list
 
 fetch("http://localhost:5678/api/categories")
   .then((response) => {
@@ -127,7 +127,6 @@ image.addEventListener("change", function () {
   const reader = new FileReader();
   reader.addEventListener("load", () => {
     uploaded_image = reader.result;
-    console.log(uploaded_image);
     document.querySelector(
       "#display-image"
     ).style.backgroundImage = `url(${uploaded_image})`;
@@ -174,7 +173,6 @@ form.addEventListener("submit", async (event) => {
       }
     })
     .then((data) => {
-      console.log(data);
       console.log("voici l'objet ajouté ", data);
     });
 });
@@ -196,7 +194,6 @@ function deleteObjet(id) {
 // onclick see delete project
 
 function modalProject() {
-  console.log("ouverture modal");
   let modal = document.querySelector(".modal");
   modal.style.display = "flex";
   mainFixed = document.getElementById("specificPropertiesDiv");
@@ -235,3 +232,7 @@ form.addEventListener("change", async () => {
     document.querySelector(".buttonInput").style.pointerEvents = "all";
   }
 });
+
+const toTop = () => {
+  window.scrollTo(0, 0);
+};

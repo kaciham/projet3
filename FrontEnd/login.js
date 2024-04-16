@@ -1,9 +1,4 @@
 const form = document.querySelector("form");
-console.log(form);
-
-console.log(password);
-console.log(email);
-
 let storage = window.localStorage;
 
 form.addEventListener("submit", (e) => {
@@ -20,7 +15,6 @@ form.addEventListener("submit", (e) => {
   };
   //création de la charge utile en convertissant le JSON en string
   const chargeUtile = JSON.stringify(connexion);
-  console.table(chargeUtile);
 
   // const message = document.getElementsByClassName(errorMessage);
   // message.value = "";

@@ -22,15 +22,22 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+html {
+	scroll-behavior: smooth;	
+}
+
 body {
 	line-height: 1;
 	background-color:#FFFEF8 ;
+
 }
 
 ol, ul {
@@ -145,6 +152,15 @@ li:hover {
 	width: 304px;
 	height: 407px;
 	background-size: cover;
+	border-radius: 0px;
+	transition: filter 5s ease-in-out;
+	transition: border-radius 1s ease;
+	filter: none;
+}
+
+.gallery img:hover {
+	filter: brightness(115%);
+	border-radius: 30px;
 }
 
 #contact {
@@ -589,4 +605,25 @@ position: absolute;
 
 .cursor {
 	cursor: pointer;
+}
+
+.scrollTop {
+	padding: 50px;
+	margin: 20px;
+	float: left;
+	width: 30px;
+	height: 30px;
+	z-index: 4;
+	background-color: #187a62 ;
+	opacity: 0.6;
+	position:fixed;
+	bottom:  5px;
+	right: 5px;
+	border-radius: 50%;
+	cursor: pointer;
+
+}
+
+.scrollTop svg {
+	color: white;
 }
